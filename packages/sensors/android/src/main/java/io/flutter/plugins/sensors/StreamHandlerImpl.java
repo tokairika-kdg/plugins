@@ -24,7 +24,7 @@ class StreamHandlerImpl implements EventChannel.StreamHandler {
   @Override
   public void onListen(Object arguments, EventChannel.EventSink events) {
     sensorEventListener = createSensorEventListener(events);
-    sensorManager.registerListener(sensorEventListener, sensor, 10);
+    sensorManager.registerListener(sensorEventListener, sensor, 2500);
   }
 
   @Override
